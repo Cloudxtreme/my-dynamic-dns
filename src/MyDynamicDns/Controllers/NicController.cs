@@ -56,6 +56,7 @@ namespace MyDynamicDns.Controllers
                 }
 
                 Route53Service.UpdateRoute53Record(hostname, newIp);
+                await OpenDnsService.UpdateOpenDnsNetwork(newIp);
 
                 Log.Information($"good {hostname} {ipAddress} {newIp}");
                 return ReturnStatus($"good {newIp}");

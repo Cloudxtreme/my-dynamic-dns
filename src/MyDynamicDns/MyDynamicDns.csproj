@@ -97,7 +97,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -113,6 +115,7 @@
     <Compile Include="Results\AddChallengeOnUnauthorizedResult.cs" />
     <Compile Include="Results\AuthenticationFailureResult.cs" />
     <Compile Include="Services\IpAddressService.cs" />
+    <Compile Include="Services\OpenDnsService.cs" />
     <Compile Include="Services\Route53Service.cs" />
     <Compile Include="Settings.cs" />
   </ItemGroup>
